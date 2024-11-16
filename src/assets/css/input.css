@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tw-ring-color: rgba(0, 162, 255, 0.2);
+}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@layer components {
+  .card-container {
+    @apply flex rounded-md transition-all hover:translate-y-1 hover:-translate-x-1 cursor-pointer flex-col gap-[10px] pb-5 border-primary;
+  }
+  .card-icon{
+    @apply absolute h-[48px] w-[48px] left-1/2 top-1/2  flex justify-center items-center text-white p-2;
+  }
+  .card-actions{
+    @apply flex flex-col w-full  gap-[15px] px-5;
+  }
+  .btn-primary{
+    @apply flex text-white justify-center text-center text-sm py-[10px] gap-[5px] px-[15px] bg-black items-center rounded-md transition-all active:translate-y-1 hover:translate-y-0.5 hover:shadow-2xl;
+  }
+  .btn-primary:disabled{
+    @apply bg-transparent hover:translate-y-0 border-primary hover:shadow-none text-black/20;
+  }
+  .btn-border{
+    @apply flex text-black active:translate-y-0.5 hover:text-white hover:bg-black  justify-center text-center text-sm py-[5px] gap-[5px] px-[10px] border-primary items-center rounded-md transition-all  ;
+  }
+  .btn-border svg{ 
+    @apply fill-black;
+  }
+  .btn-border:hover svg{
+    @apply fill-white;
+  }
+  .chat{
+    @apply flex py-1.5 px-2.5 rounded-lg items-center justify-between cursor-pointer hover:bg-bg_card;
+  }
+  .chat p:last-child {
+    @apply transition-all opacity-0
+  }
+  .chat:hover p {
+    @apply opacity-100
+  }
+}
+
+body {
+  background-color: #F0EDEB;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2A2A2A;
+}
+
+.font-geforce {
+  font-family: 'GeForce-bold', Arial, Helvetica, sans-serif;
+}
+
+.header-nav a.lock::after {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  height: 11px;
+  width: 11px;
+  content: url(/assets/img/lock.svg);
+}
+
+.header-nav a.lock {
+  color: rgba(42, 42, 42, 0.2);
+  position: relative;
+  cursor: not-allowed;
+}
+
+.header-nav a {
+  padding: 0px 10px;
+}
+
+.border-primary {
+  border-radius: var(--5, 5px);
+  border: 1px solid var(--border-primary, rgba(42, 42, 42, 0.10));
+}
+
+.avatar.big{
+  width: 74px;
+  height: 74px;
+  font-weight: 700;
+  font-size: 25px;
+}
+.avatar {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.14px;
+  border-radius: 110px;
+  background: linear-gradient(136deg, #B5B5B5 24.54%, #979797 115.45%);
+}
+
+.animateUp {
+  animation: animateUp 0.7s ease-in-out;
+
+}
+
+.question {
+  user-select: none;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  border: none;
+  transition: all 0.4s;
+}
+
+.faq.show .answer {
+  max-height: 500px;
+  overflow: visible;
+  border: unset;
+  padding-top: 10px;
+}
+
+input::placeholder {
+  color: rgba(42, 42, 42, 0.50) !important;
+}
+.image-container{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-container div {
+  border-radius: 99999px;
+  transform: translateX(-50%) translateY(-50%);
+  background: rgba(240, 237, 235, 0.80);
+  backdrop-filter: blur(calc(var(--50, 50px) / 2));
+}
+
+input {
+  outline: none;
+  background: transparent;
+  border: none;
+
+}
+
+.faq svg {
+  transition: all 0.4s;
+}
+
+.faq.show svg {
+  transform: rotate(90deg);
+}
+
+@keyframes animateUp {
+  0% {
+
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+
+
+  }
+}
+
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-mono-thin-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.ibm-plex-mono-extralight-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.ibm-plex-mono-light-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ibm-plex-mono-regular-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ibm-plex-mono-medium-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ibm-plex-mono-semibold-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ibm-plex-mono-bold-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
