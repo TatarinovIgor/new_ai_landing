@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "route": "https://crl.ac/https://testnet.crl.ac/ui/marketplace",
+      "methods": [
+        "get"
+      ],
+      "redirect": "https://testnet.crl.ac/ui/marketplace",
+      "statusCode": 303
+    }
+  ]
+}
