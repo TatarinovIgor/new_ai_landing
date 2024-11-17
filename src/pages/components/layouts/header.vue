@@ -53,7 +53,7 @@ function toggleMenu() {
       CRL
     </RouterLink>
     <div class="flex max-md:hidden header-nav items-center gap-[10px]">
-      <RouterLink to="https://testnet.crl.ac/ui/marketplace" class="hover:text-black/70 transition-all">
+      <RouterLink to="/marketplace" class="hover:text-black/70 transition-all" onclick="window.location.href = 'testnet.crl.ac/ui/marketplace'">
         Marketplace
       </RouterLink>
       <a href="" class="lock">
@@ -62,7 +62,7 @@ function toggleMenu() {
       <a href="" class="lock">
         Roadmap
       </a>
-      <RouterLink to="/faq" class="hover:text-black/70 transition-all">
+      <RouterLink to="/faq" class="hover:text-black/70 transition-all" onclick="window.location.href = 'crl.ac/faq'">
         FAQ
       </RouterLink>
       <a href="" class="lock">
@@ -94,13 +94,13 @@ function toggleMenu() {
                           fill="#2A2A2A"/>
                   </svg>
                 </div>
-                <RouterLink to="https://testnet.crl.ac/ui/profile" class=" text-lg text-black/70 hover:text-black flex items-center  gap-[5px]">
+                <RouterLink to="/profile" class=" text-lg text-black/70 hover:text-black flex items-center  gap-[5px]" onclick="window.location.href = 'testnet.crl.ac/ui/profile'">
                   {{ userModel.username }}
                   <div class="avatar">
                     {{ userModel.username?.slice(0, 2) }}
                   </div>
                 </RouterLink>
-                <RouterLink to="https://testnet.crl.ac/ui/marketplace" class=" text-lg text-black/70 hover:text-black  transition-all">
+                <RouterLink to="/marketplace" class=" text-lg text-black/70 hover:text-black  transition-all" onclick="window.location.href = 'testnet.crl.ac/ui/marketplace'">
                   Marketplace
                 </RouterLink>
                 <div class="lock text-lg text-black/20 ">
@@ -120,7 +120,7 @@ function toggleMenu() {
           </div>
         </transition>
       </div>
-      <RouterLink to="https://testnet.crl.ac/ui/profile" class="hidden md:flex  items-center gap-[5px]">
+      <RouterLink to="/profile" class="hidden md:flex  items-center gap-[5px]" onclick="window.location.href = 'testnet.crl.ac/ui/profile'">
         {{ userModel.username }}
         <div class="avatar">
           {{ userModel.username?.slice(0, 2) }}
@@ -129,10 +129,10 @@ function toggleMenu() {
     </div>
     <div v-else>
       <div class="hidden md:flex gap-2" >
-        <RouterLink to="https://testnet.crl.ac/ui/auth/login" class="btn-border ">
+        <RouterLink to="/login" class="btn-border " onclick="window.location.href = 'testnet.crl.ac/ui/auth/login'">
           Log in
         </RouterLink>
-        <RouterLink to="https://testnet.crl.ac/ui/auth/registration" class="btn-border ">
+        <RouterLink to="/register" class="btn-border " onclick="window.location.href = 'testnet.crl.ac/ui/auth/registration'" >
           Sign up
         </RouterLink>
       </div>
@@ -156,14 +156,14 @@ function toggleMenu() {
                   </svg>
                 </div>
                 <div class="flex gap-2" >
-                  <RouterLink to="https://testnet.crl.ac/ui/auth/login" class="btn-border ">
+                  <RouterLink to="/login" class="btn-border " onclick="window.location.href = 'testnet.crl.ac/ui/auth/login'">
                     Log in
                   </RouterLink>
-                  <RouterLink to="https://testnet.crl.ac/ui/auth/registration" class="btn-border ">
+                  <RouterLink to="/register" class="btn-border " onclick="window.location.href = 'testnet.crl.ac/ui/registration'">
                     Sign up
                   </RouterLink>
                 </div>
-                <RouterLink to="https://testnet.crl.ac/ui/marketplace" class=" text-lg text-black/70 hover:text-black  transition-all">
+                <RouterLink to="/marketplace" class=" text-lg text-black/70 hover:text-black  transition-all" onclick="window.location.href = 'testnet.crl.ac/ui/marketplace'">
                   Marketplace
                 </RouterLink>
                 <div class="lock text-lg text-black/20 ">
