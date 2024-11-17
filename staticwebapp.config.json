@@ -1,12 +1,1 @@
-{
-  "routes": [
-    {
-      "route": "https://crl.ac/https://testnet.crl.ac/ui/marketplace",
-      "methods": [
-        "get"
-      ],
-      "rewrite": "https://testnet.crl.ac/ui/marketplace",
-      "statusCode": 301
-    }
-  ]
-}
+{}
