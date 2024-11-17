@@ -5,8 +5,8 @@
       "methods": [
         "get"
       ],
-      "redirect": "https://testnet.crl.ac/ui/marketplace",
-      "statusCode": 303
+      "rewrite": "https://testnet.crl.ac/ui/marketplace",
+      "statusCode": 301
     }
   ]
 }
